@@ -3,11 +3,10 @@ import type { AvailableThemes } from "../types/types";
 import { themes } from "../constants/themes";
 
 
-
 const themesToMapOver = Object.keys(themes) as AvailableThemes[];
 
-const ThemeSelector = () => {
 
+const ThemeSelector = () => {
   const { changeTheme } = useTheme();
 
   return (

@@ -1,14 +1,10 @@
 import { useTheme } from "../contexts/ThemeContext";
 import { themes } from "../constants/themes";
-
 import ThemeSelector from "./ThemeSelector";
-
-
 
 
 const Header = () => {
   const { theme } = useTheme();
-
 
   return (
     <div
@@ -16,7 +12,10 @@ const Header = () => {
       style={{ backgroundColor: themes[theme].background, borderColor: themes[theme].text }}
     >
       <div>
-        <p>placeholder</p>
+        <p
+          className="cubano font-segoeui text-3xl transition-all duration-400 select-none font-semibold"
+          style={{ color: themes[theme].primary }}
+        >Focus Pomodoro</p>
       </div>
       <ThemeSelector />
     </div>

@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
 
+@font-face {
+  font-family: segoeui;
+  src: url("./public/segoeui.ttf") format("ttf");
+}
+
+@theme {
+  --font-cubano: segoeui;
+}
+
+
 .timer {
   border-radius: 50%;
   inset: 0;
