@@ -8,16 +8,16 @@ interface ThemeType {
   primary: string;
 };
 
-type Theme = keyof typeof themes;
+type AvailableThemes = keyof typeof themes;
 
 interface ContextType {
-  theme: Theme;
-  changeTheme: (theme: Theme) => void;
+  theme: AvailableThemes;
+  changeTheme: (theme: AvailableThemes) => void;
 };
 
 
 export type {
   ThemeType,
   ContextType,
-  Theme,
+  AvailableThemes,
 };

@@ -23,4 +23,4 @@ export const themes = {
 		text: "#D4D4D4",
 		primary: "#FF8C00",
 	},
-};
+} as const;

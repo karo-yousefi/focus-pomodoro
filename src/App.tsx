@@ -1,6 +1,19 @@
+import { useTheme } from "./contexts/ThemeContext";
+import { themes } from "./constants/themes";
+import Timer from "./components/Timer";
+import Header from "./components/Header";
+
 const App = () => {
+  const { theme } = useTheme();
+
   return (
-    <div>App</div>
+    <div
+      className="flex justify-center items-center w-screen h-screen transition-all duration-400"
+      style={{ backgroundColor: themes[theme].background }}
+    >
+      <Header />
+      <Timer />
+    </div>
   )
 }
 

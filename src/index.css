@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+
+.timer {
+  border-radius: 50%;
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.progress {
+  z-index: 0;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  translate: -2% -2%;
+  border-radius: 50%;
+  width: 104%;
+  height: 104%;
+  background: conic-gradient(
+    var(--primary-color) var(--color-progress),
+    var(--text-color) var(--color-progress)
+  );
+}
