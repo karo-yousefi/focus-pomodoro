@@ -2,7 +2,7 @@ const pomodoroTimes = [
   {
     id: 0,
     title: "10:00",
-    timeInSec: 600,
+    timeInSec: 3,
   },
   {
     id: 1,

@@ -1,7 +1,7 @@
 import Button from "./Button";
 
-const TimerControls = ({ isStarted, handleStart, handleStop }: {
-  isStarted: boolean;
+const TimerControls = ({ handleStart, handleStop, hasCountdownFinished }: {
+  hasCountdownFinished: boolean;
   handleStart: () => void;
   handleStop: () => void;
 }) => {
@@ -12,8 +12,8 @@ const TimerControls = ({ isStarted, handleStart, handleStop }: {
       className=""
     >
       {
-        isStarted ?
-          <Button title="Stop" onClick={handleStop} /> :
+        hasCountdownFinished ?
+          <Button title="Restart" onClick={handleStop} /> :
           <Button title="Start" onClick={handleStart} />
       }
     </div>

@@ -1,9 +1,10 @@
 import { themes } from "../constants/themes";
 import { useTheme } from "../contexts/ThemeContext";
 
-const TimerDigits = ({ time, openTimerModal }: {
+const TimerDigits = ({ time, openTimerModal, isStarted }: {
   time: number;
   openTimerModal: () => void;
+  isStarted: boolean;
 }) => {
 
   const { theme } = useTheme();
@@ -27,7 +28,7 @@ const TimerDigits = ({ time, openTimerModal }: {
   }
 
   return (
-    <div onClick={openTimerModal} className="p-10 select-none cursor-pointer">
+    <div onClick={!isStarted ? openTimerModal : () => { }} className="p-10 select-none cursor-pointer">
       <p
         className="text-8xl font-light transition-all duration-200"
         style={{ color: themes[theme].text }}
