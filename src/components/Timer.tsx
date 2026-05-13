@@ -38,15 +38,10 @@ const Timer = () => {
     setIsStarted(true);
   }
 
-  const handleStop = () => {
-    console.log("Countdown Stoped");
-
-    if (timerIntervalRef.current) {
-      clearInterval(timerIntervalRef.current);
-      timerIntervalRef.current = null;
-    };
-
+  const handleRestart = () => {
     setIsStarted(false);
+    setTime(fullTime);
+    setHasCountdownFinished(false);
   }
 
   const updateFullTime = (time: number) => {
@@ -131,7 +126,7 @@ const Timer = () => {
       </div>
 
       {/* controls */}
-      <TimerControls handleStart={handleStart} handleStop={handleStop} hasCountdownFinished={hasCountdownFinished} />
+      <TimerControls handleStart={handleStart} handleStop={handleRestart} hasCountdownFinished={hasCountdownFinished} />
 
       {/* modal to set the timer */}
       <TimerModal closeTimerModal={closeTimerModal} isTimerModalOpen={isTimerModalOpen} updateFullTime={updateFullTime} />

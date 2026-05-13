@@ -21,10 +21,16 @@ interface PomodoroTimeType {
   timeInSec: number;
 }
 
+interface CreateContextType {
+  localData: string;
+  updateLocalDate: (key: string, value: object) => void;
+}
+
 
 export type {
   ThemeType,
   ContextType,
   AvailableThemes,
   PomodoroTimeType,
+  CreateContextType,
 };

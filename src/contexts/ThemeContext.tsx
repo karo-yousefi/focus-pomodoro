@@ -1,5 +1,5 @@
 import { useState, useContext, createContext } from "react";
-import type { ContextType, Theme } from "../types/types";
+import type { ContextType, AvailableThemes } from "../types/types";
 
 
 const ThemeContext = createContext<ContextType>({
@@ -9,9 +9,9 @@ const ThemeContext = createContext<ContextType>({
 
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("light1")
+  const [theme, setTheme] = useState<AvailableThemes>("light1")
 
-  const changeTheme = (theme: Theme) => {
+  const changeTheme = (theme: AvailableThemes) => {
     setTheme(theme);
   }
 
