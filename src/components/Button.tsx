@@ -10,7 +10,7 @@ const Button = ({ title, onClick }: {
 
   return (
     <div
-      className="px-5 py-2 m-2 rounded-lg cursor-pointer transition-all opacity-100 hover:opacity-80 hover:translate-y-px active:translate-y-0.5 active:opacity-70 text-xl select-none"
+      className="px-5 py-2 m-2 rounded-lg cursor-pointer transition-all opacity-100 hover:opacity-80 hover:translate-y-px active:translate-y-0.5 active:opacity-70 text-2xl select-none"
       style={{ backgroundColor: themes[theme].primary, color: themes[theme].background }}
       onClick={onClick}
     >

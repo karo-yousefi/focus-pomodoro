@@ -1,5 +1,3 @@
-import { useTheme } from "../contexts/ThemeContext";
-import { themes } from "../constants/themes";
 import Button from "./Button";
 
 const TimerControls = ({ isStarted, handleStart, handleStop }: {
@@ -8,7 +6,6 @@ const TimerControls = ({ isStarted, handleStart, handleStop }: {
   handleStop: () => void;
 }) => {
 
-  const { theme } = useTheme();
 
   return (
     <div

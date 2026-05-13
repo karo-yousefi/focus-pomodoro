@@ -15,9 +15,16 @@ interface ContextType {
   changeTheme: (theme: AvailableThemes) => void;
 };
 
+interface PomodoroTimeType {
+  id: number;
+  title: string;
+  timeInSec: number;
+}
+
 
 export type {
   ThemeType,
   ContextType,
   AvailableThemes,
+  PomodoroTimeType,
 };

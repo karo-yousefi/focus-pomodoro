@@ -8,12 +8,12 @@ const Header = () => {
 
   return (
     <div
-      className="w-full h-12 border-b flex justify-between items-center gap-2 absolute top-0 px-5 transition-all duration-150"
+      className="w-full h-12 border-b flex justify-between items-center gap-2 absolute top-0 px-5 transition-all duration-200"
       style={{ backgroundColor: themes[theme].background, borderColor: themes[theme].text }}
     >
       <div>
         <p
-          className="cubano font-segoeui text-3xl transition-all duration-400 select-none font-semibold"
+          className="cubano font-segoeui text-3xl transition-all duration-500 select-none font-semibold"
           style={{ color: themes[theme].primary }}
         >Focus Pomodoro</p>
       </div>

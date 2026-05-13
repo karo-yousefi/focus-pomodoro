@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div
-      className="flex justify-center items-center w-screen h-screen transition-all duration-400"
+      className="flex justify-center items-center w-screen h-screen transition-all duration-500"
       style={{ backgroundColor: themes[theme].background }}
     >
       <Header />
